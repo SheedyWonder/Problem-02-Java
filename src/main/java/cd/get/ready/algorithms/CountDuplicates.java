@@ -1,13 +1,26 @@
 package cd.get.ready.algorithms;
-
-public class CountDuplicates {
+import java.util.*;
+public class CountDuplicates
+{
     /**
      * Example of overloading a function that accepts a Array String
      * @param input
      * @return
      */
-    public Integer countDuplicates(String[] input){
-        return null;
+    //Use a hashmap
+    public Integer countDuplicates(String[] input) {
+        int count = 0;
+        for (int i = 0; i < input.length; i++)
+        {
+            for (int j = i + 1; j < input.length; j++)
+            {
+                if(input[i] == input[j])
+                {
+                    count++;
+                }
+            }
+        }
+            return count;
     }
 
     /**
@@ -15,7 +28,8 @@ public class CountDuplicates {
      * @param input
      * @return
      */
-    public Integer countDuplicates(Integer[] input){
+    public Integer countDuplicates(Integer[] input)
+    {
         return null;
     }
 }
